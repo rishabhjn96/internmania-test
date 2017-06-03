@@ -1,0 +1,355 @@
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="materialize/css/materialize.min.css" />
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+  <style>
+  .padded-container{
+    padding: 5px;
+    background-color: #dcdbdd;
+  } body{
+        overflow-y:hidden;
+      }
+        #list ul {
+          background-color: #4db6ac;
+          margin-left: -8px;
+        }
+        #list ul li{
+          width:300px;
+          text-align: left;
+          margin-left: 9px;
+        }
+        #list ul li:hover{
+          background-color: teal;
+        }
+        #card{
+      min-height: 150px;
+      background-color: white;
+      box-shadow: 0px 0px 5px black;
+      color: grey;
+      border-radius: 0px;
+      padding-left: 3%;
+      padding-top: 1%;
+      margin: 3%;
+    }
+    h5{
+      font-size: 18px;
+    }
+    h4{
+      
+      font-family: Tahoma;
+    }
+  </style>  
+</head>
+<body>
+
+ <nav>
+  <div class="nav-wrapper teal">
+  <div class="container">
+    <a href="#" class="brand-logo">Logo</a>
+    <ul id="nav-mobile" class="right hide-on-med-and-down">&nbsp;&nbsp;
+      <li><a href="#"><i class="material-icons nav-icon-pad">home</i></a></li>
+    	<li><a href="#"><i class="material-icons nav-icon-pad">notifications</i></a></li>
+     	<li><a href="#"><i class="material-icons nav-icon-pad">settings</i></a></li>
+     	<li><a href="#"><i class="material-icons nav-icon-pad">power_settings_new</i></a></li>
+    </ul>
+    </div>
+  </div>
+ </nav>
+<br />
+</div>
+<div class="container"> 
+  <div ng-controller="student">
+      <div class="left">
+        {{data.name}}<br />
+        {{data.college_name}}<br />
+        {{data.email_id}}
+      </div>
+      <div class="right">
+      {{data.test_score}}<br />
+      {{data.internmania_id}}<br />   
+      </div>
+  </div>
+<br />
+<br />
+<br />
+  <hr class="blue">
+  
+<div class="row" style="overflow-y: hidden;">
+      <div class="col s3" id="list">
+        <ul class="tabs" style="display: list-item; height:560px; overflow:hidden; border-right: 1px solid grey;" ><br>
+          <li class="tab"><a class="active" style="color:white;" href="#test1">Add Project</a></li><br><br>
+          <li class="tab"><a href="#test2" style="color:white;">Add Experience</a></li><br><br>
+          <li class="tab"><a href="#test3" style="color:white;">Achievement and Awards</a></li><br><br>
+          <li class="tab"><a href="#test4" style="color:white;">Publications</a></li><br><br>
+          <li class="tab"><a href="#test5" style="color:white;">Skills</a></li>
+        </ul>
+      </div>
+      <div class="col s9" style=" height:500px; overflow-y: auto;">
+      
+
+
+      <!--  First       -->
+
+
+
+        <div id="test1" class="col s12">
+        
+        <br>
+        <div id="form">
+          <div id="modal1" class="modal modal-fixed-footer">
+            <div class="modal-content">
+              <center><h4 style="width:100%; background-color:#616161; color:white; height:60px; padding:2%;">Add Project</h4></center>
+              <div class="row">
+            <form class="col s12">
+              <div class="row">
+                <div class="input-field col s6">
+                  <input id="first_name" type="text" class="validate" required>
+                  <label for="first_name">Project Title</label>
+                </div>
+             
+                <div class="input-field col s6">
+                  <input id="email" type="email" class="validate" required>
+                  <label for="email">Technology Used</label>
+                </div>
+                <div class="col s12">
+                  Description:<br>
+                  <div class="input-field inline">
+                    <input id="email" type="email" class="validate col s12" required>
+                    <label for="email" data-error="wrong" data-success="right">Write here</label>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+            </div>
+              
+          <div class="modal-footer">
+              <a href="#" class="modal-action modal-close waves-effect waves-green btn-flat"  id="btn">Submit</a>
+            </div>
+        </div>
+      </div>
+          <a class="btn waves-effect waves-light red" href="#modal1">Add New</a>
+          
+          <div id="addProject">
+            
+          </div>
+        </div>
+
+        <!--  Second    -->
+
+
+        <div id="test2" class="col s12">
+        <br>
+          <div id="form">
+          <div id="modal2" class="modal modal-fixed-footer">
+            <div class="modal-content">
+              <center><h4 style="width:100%; background-color:#616161; color:white; height:60px; padding:2%;">Add Experience</h4></center>
+              <div class="row">
+            <form class="col s12">
+              <div class="row">
+                <div class="input-field col s4">
+                  <input id="first_name" type="text" class="validate" required>
+                  <label for="first_name">Project Title</label>
+                </div>
+              </div>
+              <div class="row">
+                <div class="input-field col s4">
+                  <input id="email" type="email" class="validate" required>
+                  <label for="email">Technology Used</label>
+                </div>
+                <div class="col s12">
+                  Description:
+                  <div class="input-field inline">
+                    <input id="email" type="email" class="validate" required>
+                    <label for="email" data-error="wrong" data-success="right">Write here</label>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+            </div>
+              
+          <div class="modal-footer">
+              <a href="#" class="modal-action modal-close waves-effect waves-green btn-flat"  id="btn1">Submit</a>
+            </div>
+        </div>
+      </div>
+          <a class="btn waves-effect waves-light red" href="#modal2">Add New</a>
+          
+          <div id="addExperience">
+            
+          </div>
+        </div>
+
+
+        <!--  Third    -->
+
+
+        <div id="test3" class="col s12">
+          <br>
+          <div id="form">
+          <div id="modal3" class="modal modal-fixed-footer">
+            <div class="modal-content">
+              <center><h4 style="width:100%; background-color:#616161; color:white; height:60px; padding:2%;">Add Achievements and Awards</h4></center>
+              <h1>Please Add Fields.</h1>
+            </div>
+              
+          <div class="modal-footer">
+              <a href="#" class="modal-action modal-close waves-effect waves-green btn-flat"  id="btn2">Submit</a>
+            </div>
+        </div>
+      </div>
+          <a class=" btn waves-effect waves-light red" href="#modal3">Add New</a>
+          
+          <div id="addAward">
+            
+          </div>
+        </div>
+
+
+        <!--  Fourth       -->
+
+
+        <div id="test4" class="col s12">
+          <br>
+          <div id="form">
+          <div id="modal4" class="modal modal-fixed-footer">
+            <div class="modal-content">
+              <center><h4 style="width:100%; background-color:#616161; color:white; height:60px; padding:2%;">Add a Publication</h4></center>
+              <div class="row">
+            <form class="col s12">
+              <div class="row">
+                <div class="input-field col s4">
+                  <input id="first_name" type="text" class="validate" required>
+                  <label for="first_name">Title</label>
+                </div>
+              </div>
+              <div class="row">
+                <div class="input-field col s4">
+                  <input id="first_name" type="text" class="validate" required>
+                  <label for="first_name">Place of publishing</label>
+                </div>
+              </div>
+              <div class="row">
+                <div class="input-field col s6">
+                  
+                  <label for="email">Name of other members ( if any )</label>
+                  <div class="chips"></div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col s12">
+                  Description:
+                 <div class="row">
+                  <form class="col s12">
+                    <div class="row">
+                      <div class="input-field col s12">
+                        <textarea id="textarea1" class="materialize-textarea"></textarea>
+                        <label for="textarea1">Textarea</label>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+                </div>
+              </div>
+            </form>
+          </div>
+            </div>
+              
+          <div class="modal-footer">
+              <a href="#" class="modal-action modal-close waves-effect waves-green btn-flat"  id="btn3">Submit</a>
+            </div>
+        </div>
+      </div>
+          <a class=" btn waves-effect waves-light red" href="#modal4">Add New</a>
+          <div id="addPublication">
+          </div>
+        </div>
+
+
+        <!--  Fifth    -->
+
+
+        <div id="test5" class="col s12">
+        <br>
+          <div class="row">
+          <form class="col s12">
+            <div class="row">
+            <h5>Computer Languages :</h5>
+              <div class="input-field col s6">
+                  <div class="chips"></div>
+                <label for="first_name">Press Enter After each Skill</label>
+              </div>
+             </div>
+
+             <div class="row">
+            <h5>Soft Skills :</h5>
+              <div class="input-field col s6">
+                  <div class="chips"></div>
+                <label for="first_name">Press Enter After each Skill</label>
+              </div>
+             </div>
+
+             <div class="row">
+            <h5>Management Skills :</h5>
+              <div class="input-field col s6">
+                  <div class="chips"></div>
+                <label for="first_name">Press Enter After each Skill</label>
+              </div>
+             </div>
+
+
+            </form>
+            </div>
+        </div>
+      </div>
+  </div>
+      <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script type="text/javascript" src="materialize/js/materialize.min.js" ></script>
+
+        <script>
+            $(document).ready(function () {
+                // Initialize collapse button
+                $(".button-collapse").sideNav();
+                // Initialize collapsible (uncomment the line below if you use the dropdown variation)
+                $('.collapsible').collapsible();
+
+                $('select').material_select();
+
+                $('.collapsible').collapsible();
+
+                $('.slider').slider();
+
+                $('.scrollspy').scrollSpy();
+
+                $('.modal').modal();
+
+                $('.chips').material_chip();
+
+                $("#btn").click(function(){
+            var domElement = $('<div id="card"><h5>Project Title -</h5><br><h5>Technology Used -</h5><br><h5>Description -</h5><br></div>');
+              $('#addProject').after(domElement);
+        });
+
+            });
+          $(document).ready(function(){
+            $("#btn1").click(function(){
+            var domElement1 = $('<div id="card"><h5>Project Title -</h5><br><h5>Technology Used -</h5><br><h5>Description -</h5><br></div>');
+              $('#addExperience').after(domElement1);
+          });
+          })
+          $(document).ready(function(){
+            $("#btn2").click(function(){
+            var domElement2 = $('<div id="card"><h5>Project Title -</h5><br><h5>Technology Used -</h5><br><h5>Description -</h5><br></div>');
+              $('#addAward').after(domElement2);
+          });
+          })
+          $(document).ready(function(){
+            $("#btn3").click(function(){
+            var domElement3 = $('<div id="card"><h5>Project Title -</h5><br><h5>Technology Used -</h5><br><h5>Description -</h5><br></div>');
+              $('#addPublication').after(domElement3);
+          });
+          })
+        </script>
+</body>
+</html>

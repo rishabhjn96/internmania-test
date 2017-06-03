@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
+  <title>Login</title>
+
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="materialize/css/materialize.min.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="css/myim.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+</head>
+
+<body ng-app="IMapp">
+
+  <!--Navbar-->
+  <div class="navbar-fixed">
+    <nav>
+  <div class="nav-wrapper black">
+  <div class="container">
+    <a href="#" class="brand-logo"><img src="img/imlogobig.png" height="50px"/></a>
+    <ul id="nav-mobile" class="right hide-on-med-and-down">&nbsp;&nbsp;
+      <li><a href="index.html"><i class="material-icons nav-icon-pad">home</i></a></li>
+      <li><a href="notif.html"><i class="material-icons nav-icon-pad">notifications</i></a></li>
+      <li><a href="build_resume.html"><i class="material-icons nav-icon-pad">settings</i></a></li>
+      <li><a href="#"><i class="material-icons nav-icon-pad">power_settings_new</i></a></li>
+    </ul>
+    </div>
+  </div>
+ </nav>
+  </div>
+  <!--Navbar ends-->
+
+  <!--User info div starts here-->
+  <!--Info
+  We have divided the whole div into 3 parts each of width 4. We will be using first and last div. We will leave the div in middle for proper indentation of the content as shown on paper
+  -->
+  <div class="row">
+  <div class="container">
+    <div class="col s12 m4">
+    <br><!--This br tag is for proper spacing of content-->
+    <b>Rohan Gupta<br>
+    ABES Engineering College<br>
+    rohan.13cs015@abes.ac.in</b>
+    </div>
+    <div class="col s12 m4"></div> <!--Leaving this div empty for proper spacing of content as described above--> 
+    <div class="col s12 m4">
+      <br>
+      <b>Test Score:</b>- NA<br>
+      <b>InternMania ID:</b>- 1234567890<br>
+      <a href="#"><b>My Resume</b></a><br><br>      
+    </div>
+<hr>
+  </div>
+  </div>
+  <!--user info div ends here-->
+
+  <!--Browse jobs div-->
+  <!--Info
+  Dividing the whole div into 2 parts of size 4 and 8. 4 for filters and 8 for the conten browsing
+  -->
+  <div class="row container-fluid">
+    
+    <!--div for content starts here-->
+    <div class="col s12 m12">
+      <div class="row container">
+        <div class="col s12">
+          <ul class="tabs transparent">
+            <li class="tab col s3"><a href="#jobs"><h5 class="black-text">JOBS</h5></a></li>
+            <li class="tab col s3"><a href="#internships"><h5 class="black-text">INTERNSHIPS</h5></a></li>
+            <li class="tab col s3"><a class="active" href="#coachings"><h5 class="black-text">COACHINGS</h5></a></li>
+          </ul>
+        </div>
+
+        <!--Div for Jobs posts-->
+        <div id="jobs" class="col s12">
+        <br>
+          <!--Filter for jobs-->
+          <div class="row">
+
+            <!--Domain Filter for jobs-->
+            <div class="input-field col s12 m4">
+              <select multiple>
+                <option value="" disabled selected>Choose Domain</option>
+                <option value="1">Option 1</option>
+                <option value="2">Option 2</option>
+                <option value="3">Option 3</option>
+              </select>
+              <label>Domain</label>
+            </div>
+
+            <!--Location filter for jobs-->
+            <div class="input-field col s12 m4">
+              <select multiple>
+                <option value="" disabled selected>Choose Location</option>
+                <option value="1">Option 1</option>
+                <option value="2">Option 2</option>
+                <option value="3">Option 3</option>
+              </select>
+              <label>Location</label>
+            </div>
+
+            <!--salary filter for jobs-->
+            <div class="col s12 m4">
+                <label>Salary</label>
+               <p class="range-field">
+                <input type="range" id="salary" min="0" max="10" />
+               </p>
+            </div>
+          </div>
+          <!--Filter for jobs ends here--> 
+          <br>
+          <!--Jobs goes here in a box-->
+          <table class="bordered striped">
+            <tr>
+              <td>Company Logo</td>
+              <td>
+                <b>Profile: </b>Web Developer<br>
+                <b>Salary: </b>10 LPA<br>
+                <b>Last Date: </b>23-May-17
+              </td>
+              <td>
+                <br><a href="#">View Details</a>
+              </td>
+            </tr>
+          </table>
+
+        </div>
+        <!--Company posts ends here-->
+        <!--Internships goes here-->
+        <div id="internships" class="col s12">
+        <br>
+          <!--Filter for internships-->
+          <div class="row">
+
+            <!--Domain Filter for internships-->
+            <div class="input-field col s12 m4">
+              <select multiple>
+                <option value="" disabled selected>Choose Domain</option>
+                <option value="1">Option 1</option>
+                <option value="2">Option 2</option>
+                <option value="3">Option 3</option>
+              </select>
+              <label>Domain</label>
+            </div>
+
+            <!--Location filter for internships-->
+            <div class="input-field col s12 m4">
+              <select multiple>
+                <option value="" disabled selected>Choose Location</option>
+                <option value="1">Option 1</option>
+                <option value="2">Option 2</option>
+                <option value="3">Option 3</option>
+              </select>
+              <label>Location</label>
+            </div>
+
+            <!--stipend filter for jobs-->
+            <div class="col s12 m4">
+                <label>Stipend</label>
+               <p class="range-field">
+                <input type="range" id="stipend" min="0" max="10" />
+               </p>
+            </div>
+          </div>
+          <!--Filter for internships ends here--> 
+          <br>
+          <!--internshipss goes here in a box-->
+          <table class="bordered striped">
+            <tr>
+              <td>Compay Logo</td>
+              <td>
+                <b>Profile: </b>Web Developer<br>
+                <b>Stipen:  </b> 10 LPA<br>
+                <b>Last Date:</b> 23-May-17
+              </td>
+              <td>
+                <br><a href="#">View Details</a>
+              </td>
+          </table>  
+        </div>
+
+        <!--Coachings goes here-->
+        <div id="coachings" class="col s12">
+        <br>
+          <!--Filter for coachings-->
+          <div class="row">
+
+            <!--Domain Filter for coachings-->
+            <div class="input-field col s12 m4">
+              <select multiple>
+                <option value="" disabled selected>Choose Domain</option>
+                <option value="1">Option 1</option>
+                <option value="2">Option 2</option>
+                <option value="3">Option 3</option>
+              </select>
+              <label>Domain</label>
+            </div>
+
+            <!--Location filter for coachings-->
+            <div class="input-field col s12 m4">
+              <select multiple>
+                <option value="" disabled selected>Choose Location</option>
+                <option value="1">Option 1</option>
+                <option value="2">Option 2</option>
+                <option value="3">Option 3</option>
+              </select>
+              <label>Location</label>
+            </div>
+
+            <!--fees filter for coachings-->
+            <div class="col s12 m4">
+                <label>fees</label>
+               <p class="range-field">
+                <input type="range" id="stipen" min="0" max="10" />
+               </p>
+            </div>
+          </div>
+          <!--Filter for coachings ends here--> 
+          <br>
+          <!--Jobs goes here in a box-->
+          <table class="bordered striped">
+            <tr>
+              <td>Compay Logo</td>
+              <td>
+                <b>Profile: </b>Web Developer<br>
+                <b>Stipen:  </b> 10 LPA<br>
+                <b>Last Date:</b> 23-May-17
+              </td>
+              <td>
+                <br><a href="#">View Details</a>
+              </td>
+          </table>
+        </div>
+      </div>   
+    </div>
+  </div>
+  <!--Browse jobs div ends here-->
+
+
+  <!--User info div ends here-->
+  <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="materialize/js/materialize.min.js"></script>
+  <script src="js/angular.min.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

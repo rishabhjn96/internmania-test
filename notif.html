@@ -1,0 +1,93 @@
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="materialize/css/materialize.min.css" />
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+  <style>
+  .padded-container{
+    padding: 5px;
+    background-color: #dcdbdd;
+  }
+  </style>  
+</head>
+<body>
+
+ <nav>
+  <div class="nav-wrapper blue">
+  <div class="container">
+    <a href="#" class="brand-logo">Logo</a>
+    <ul id="nav-mobile" class="right hide-on-med-and-down">&nbsp;&nbsp;
+      <li><a href="index.html"><i class="material-icons nav-icon-pad">home</i></a></li>
+    	<li><a href="notif.html"><i class="material-icons nav-icon-pad">notifications</i></a></li>
+     	<li><a href="build_resume.html"><i class="material-icons nav-icon-pad">settings</i></a></li>
+     	<li><a href="#"><i class="material-icons nav-icon-pad">power_settings_new</i></a></li>
+    </ul>
+    </div>
+  </div>
+ </nav>
+<br />
+</div>
+<div class="container"> 
+  <div ng-controller="student">
+      <div class="left">
+        {{data.name}}<br />
+        {{data.college_name}}<br />
+        {{data.email_id}}
+      </div>
+      <div class="right">
+      {{data.test_score}}<br />
+      {{data.internmania_id}}<br />   
+      </div>
+  </div>
+<br />
+<br />
+<br />
+  <hr class="blue">
+  
+  <div class="row" style="overflow-y: hidden;">
+      <div class="col s2">
+        <ul class="tabs" style="display: list-item; height:auto; overflow:hidden;" >
+          <li class="tab"><a class="active" style="color:black;" href="#test1">Messages</a></li><br><br>
+          <li class="tab"><a href="#test2" style="color:black;">Shortlistings</a></li><br><br>
+          <li class="tab"><a href="#test3" style="color:black;">Notifications</a></li>
+        </ul>
+      </div>
+      <div class="col s10" style=" height:500px; overflow-y: auto;" ng-controller="msgBlock">
+        <div id="test1" class="col s8">
+        <ul ng-repeat="message in messages">
+          <li>{{data.message}}</li>
+        </ul>
+        </div>
+        <div id="test2" class="col s12">
+        <ul ng-repeat="shortlisting in shortlistings">
+          <li>{{data.shortlisting}}</li>
+        </ul></div>
+        <div id="test3" class="col s12">
+        <ul ng-repeat="notification in notifications">
+          <li>{{data.notification}}</li>
+        </ul></div>
+      </div>
+  </div>
+      <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="materialize/js/materialize.min.js" />
+
+ <script>
+            $(document).ready(function () {
+                // Initialize collapse button
+                $(".button-collapse").sideNav();
+                // Initialize collapsible (uncomment the line below if you use the dropdown variation)
+                $('.collapsible').collapsible();
+
+                $('select').material_select();
+
+                $('.collapsible').collapsible();
+
+                $('.slider').slider();
+
+                $('.scrollspy').scrollSpy();
+
+                $('.modal').modal();
+
+            })
+        </script>
+</body>
+</html>
